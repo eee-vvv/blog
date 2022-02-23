@@ -34,6 +34,15 @@ export default function Home({ posts }) {
       <main>
         <div className="container">
           <h1>Home page will go here</h1>
+          {
+            posts.map((post, idx) => {
+              return (
+                <Link key={idx} href={`/posts/${post.slug}`}>
+                  <a>{post.frontMatter.title}</a>
+                </Link>
+              )
+            })
+          }
         </div>
       </main>
     </div>
