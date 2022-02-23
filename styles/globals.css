@@ -14,3 +14,18 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.container {
+  padding: 10px;
+}
+
+.navbar {
+  padding: 5px;
+  display: flex;
+  width: 100vw;
+  align-items: baseline;
+}
+
+.nav-link {
+  padding: 10px;
+}
