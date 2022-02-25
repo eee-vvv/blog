@@ -4,13 +4,13 @@ export default function Nav() {
   return (
     <nav className="navbar">
       <Link href="/" passHref>
-        <h2 className="nav-link">Evan's blog</h2>
+        <a className="nav-link">Evan's blog</a>
       </Link>
       <Link href="/bio" passHref>
-        <h3 className="nav-link">Bio</h3>
+        <a className="nav-link">Bio</a>
       </Link>
       <Link href="/posts" passHref>
-        <h3 className="nav-link">Posts</h3>
+        <a className="nav-link">Posts</a>
       </Link>
     </nav>
   )

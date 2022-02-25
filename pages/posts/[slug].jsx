@@ -4,6 +4,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import SyntaxHighlighter from 'react-syntax-highlighter'
+import styles from '../../styles/Post.module.css'
 
 export const getStaticPaths = async () => {
   const files = fs.readdirSync(path.join('posts'))
@@ -34,8 +35,8 @@ export const getStaticProps = async ({ params: { slug } }) => {
 
 export default function PostPage({ frontMatter: { title }, mdxSource }) {
   return (
-    <div className="container">
-      <h1>{title}</h1>
+    <div className={styles.container}>
+      <h1 className={styles.title}>{title}</h1>
       <MDXRemote {...mdxSource} />
     </div>
   )

@@ -1,9 +1,18 @@
+@font-face {
+  font-family: "Sinistre";
+  src: url("../public/fonts/sinistre/Sinistre-StCaroline.woff2") format("woff2"),
+       url("../public/fonts/sinistre/Sinistre-StCaroline.woff") format("woff");
+}
+
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  width: 100%;
+  background-color: #af56b7;
 }
 
 a {
@@ -11,19 +20,13 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-.container {
-  padding: 10px;
-}
-
 .navbar {
   padding: 5px;
   display: flex;
-  width: 100vw;
   align-items: baseline;
+  border-bottom: 3px solid black;
+  background-color: #ade6f7;
+  font-family: Sinistre;
 }
 
 .nav-link {
