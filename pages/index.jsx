@@ -2,7 +2,8 @@ import Head from 'next/head'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import Link from 'next/link'
+import styles from '../styles/Home.module.css'
+import PostLink from '../components/PostLink'
 
 export const getStaticProps = async () => {
   const files = fs.readdirSync(path.join('posts'))
@@ -32,15 +33,11 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="container">
-          <h1>Home page will go here</h1>
+        <div className={styles.container}>
+          <h1>Evan's Blog</h1>
           {
             posts.map((post, idx) => {
-              return (
-                <Link key={idx} href={`/posts/${post.slug}`}>
-                  <a>{post.frontMatter.title}</a>
-                </Link>
-              )
+              return <PostLink post={post} key={idx} />
             })
           }
         </div>
