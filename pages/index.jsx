@@ -34,7 +34,7 @@ export default function Home({ posts }) {
       </Head>
       <main>
         <div className={styles.container}>
-          <h1>Evan's Blog</h1>
+          <h1>Evan&apos;s Blog</h1>
           {
             posts.map((post, idx) => {
               return <PostLink post={post} key={idx} />
